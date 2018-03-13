@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#769dfc">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/relative_login_register_round"
+        android:layout_marginTop="50dp"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/phone"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/relative_login_left_round"
+            android:layout_marginLeft="-1dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/phone"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <Spinner
+            android:id="@+id/login_select_number"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:overlapAnchor="false"
+            android:layout_toRightOf="@+id/phone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/login_select_number"
+            android:hint="输入手机号"
+            android:textSize="14sp"
+            android:layout_marginRight="12dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:background="@null"
+            android:textColor="@color/text_color"
+            android:textColorHint="#c0c0c0"
+            android:inputType="number"
+            android:maxLength="11"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/relative_login_register_round"
+        android:layout_marginTop="20dp"
+        android:elevation="5dp">
+
+        <RelativeLayout
+            android:id="@+id/code_left"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/relative_login_left_round"
+            android:layout_marginLeft="-1dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/code"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/register_code"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:text="验证码"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:layout_toRightOf="@+id/code_left"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/register_code"
+            android:layout_toLeftOf="@+id/hr"
+            android:hint="输入验证码"
+            android:textSize="14sp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:background="@null"
+            android:textColor="@color/text_color"
+            android:textColorHint="#c0c0c0"
+            android:inputType="number"
+            android:maxLength="6"/>
+
+        <TextView
+            android:id="@+id/hr"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="|"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/register_get_code"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"/>
+
+        <TextView
+            android:id="@+id/register_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="获取验证码"
+            android:textSize="14sp"
+            android:textColor="#8aaafc"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="40dp"
+        android:text="登录"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:background="@drawable/text_register_round"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_hr"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他方式登录"
+            android:textSize="14sp"
+            android:textColor="@color/font_black_new"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_hr"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/weix"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qq"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sine"/>
+
+    </LinearLayout>
+
+</LinearLayout>

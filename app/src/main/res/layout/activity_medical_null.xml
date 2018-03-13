@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:paddingBottom="50dp">
+
+       <ImageView
+           android:id="@+id/null_img_one"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/medical_null_img"/>
+
+       <TextView
+           android:id="@+id/null_text_one"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="您的资料库是空的哦~"
+           android:textSize="12sp"
+           android:textColor="#bdbdbd"
+           android:layout_marginTop="14dp"/>
+
+       <TextView
+           android:id="@+id/null_text_two"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="不妨点击下方相机试试扫描一份病历"
+           android:textSize="12sp"
+           android:textColor="#bdbdbd"
+           android:layout_marginTop="6dp"/>
+
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/medical_null_img_arrow"
+           android:layout_below="@+id/null_text_two"
+           android:layout_marginTop="12dp"
+           android:layout_marginLeft="60dp"/>
+
+   </LinearLayout>
+
+</RelativeLayout>

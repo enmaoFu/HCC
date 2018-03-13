@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#769dfc</color>
+    <color name="colorPrimaryDark">#769dfc</color>
+    <color name="colorAccent">#769dfc</color>
+    <color name="font_gray">#999999</color>
+    <color name="font_black666">#666666</color>
+    <color name="app_bg">#ebf0f3</color>
+    <color name="tab_text_color">#404040</color>
+    <color name="tab_text_selected_color">#404040</color>
+    <color name="tab_indicator_color">#404040</color>
+    <color name="font_black_new">#2a2a2a</color>
+    <color name="font_gray_new">#9a9a9a</color>
+    <color name="caseNote">#769dfc</color>
+    <color name="checkNote">#6f86d6</color>
+    <color name="testNote">#73afd3</color>
+    <color name="prescriptionNote">#00cdac</color>
+</resources>

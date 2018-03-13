@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:background="@color/colorAccent">
+
+        <RelativeLayout
+            android:id="@+id/shop_search_re"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_toLeftOf="@+id/shop_img_right"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/relative_shop_round">
+
+            <ImageView
+                android:id="@+id/shop_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shop_search"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:padding="4dp"/>
+
+            <EditText
+                android:id="@+id/shop_search_ed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/shop_search"
+                android:hint="搜索商品"
+                android:textSize="14sp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:background="@null"
+                android:textColor="@color/text_color"
+                android:textColorHint="#60898d95"
+                android:focusableInTouchMode="false"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/shop_img_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/shop_img"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="商店"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:paddingLeft="10dp">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

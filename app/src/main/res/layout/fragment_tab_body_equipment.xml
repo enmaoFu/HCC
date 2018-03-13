@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="3月12日  星期一"
+        android:textSize="14sp"
+        android:textColor="@color/text_color"
+        android:background="#ffffff"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/relative_round"
+                android:elevation="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/healthy_add"
+                    android:text="添加手环，以获得更多健康信息"
+                    android:gravity="center"
+                    android:drawablePadding="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_color"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/healthy_round"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="添加设备"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/relative_round"
+                android:elevation="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/step_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:id="@+id/step_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/healthy_step"
+                        android:layout_centerVertical="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/step_img"
+                        android:layout_marginLeft="8dp">
+
+                        <TextView
+                            android:id="@+id/step_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="步数"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2018-03-03 12:02:03"
+                            android:layout_below="@+id/step_text"
+                            android:textSize="14sp"
+                            android:textColor="@color/font_gray"/>
+
+                        <TextView
+                            android:id="@+id/step_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="步"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"
+                            android:layout_alignParentRight="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="16sp"
+                            android:layout_toLeftOf="@+id/step_b"
+                            android:textColor="#769dfc"
+                            android:layout_marginRight="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="目标：10000步"
+                            android:layout_below="@+id/step_text"
+                            android:layout_alignParentRight="true"
+                            android:textSize="14sp"
+                            android:textColor="@color/font_gray"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/divier_style"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="0米"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:drawableLeft="@drawable/healthy_m"
+                        android:gravity="center"
+                        android:drawablePadding="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="0千卡"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:drawableLeft="@drawable/healthy_k"
+                        android:gravity="center"
+                        android:drawablePadding="6dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="0分钟"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:drawableLeft="@drawable/healthy_f"
+                        android:gravity="center"
+                        android:drawablePadding="6dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/relative_round"
+                android:elevation="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/sleep_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:id="@+id/sleep_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/healthy_sleep"
+                        android:layout_centerVertical="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/sleep_img"
+                        android:layout_marginLeft="8dp">
+
+                        <TextView
+                            android:id="@+id/sleep_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="睡眠"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2018-03-03 12:02:03"
+                            android:layout_below="@+id/sleep_text"
+                            android:textSize="14sp"
+                            android:textColor="@color/font_gray"/>
+
+                        <TextView
+                            android:id="@+id/sleep_f"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="分"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"
+                            android:layout_alignParentRight="true"/>
+
+                        <TextView
+                            android:id="@+id/sleep_f_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="——"
+                            android:textSize="16sp"
+                            android:layout_toLeftOf="@+id/sleep_f"
+                            android:textColor="#c2a8dd"
+                            android:layout_marginRight="5dp"/>
+
+                        <TextView
+                            android:id="@+id/sleep_s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="时"
+                            android:textSize="16sp"
+                            android:layout_toLeftOf="@+id/sleep_f_text"
+                            android:layout_marginRight="5dp"/>
+
+                        <TextView
+                            android:id="@+id/sleep_s_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="——"
+                            android:textSize="16sp"
+                            android:layout_toLeftOf="@+id/sleep_s"
+                            android:textColor="#c2a8dd"
+                            android:layout_marginRight="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="10小时"
+                            android:layout_below="@+id/sleep_text"
+                            android:layout_alignParentRight="true"
+                            android:textSize="14sp"
+                            android:textColor="@color/font_gray"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/divier_style"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="暂无数据"
+                        android:textSize="14sp"
+                        android:textColor="@color/font_gray"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/relative_round"
+                android:elevation="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rate_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:id="@+id/rate_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/healthy_rate"
+                        android:layout_centerVertical="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/rate_img"
+                        android:layout_marginLeft="8dp">
+
+                        <TextView
+                            android:id="@+id/rate_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="运动心率"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="————"
+                            android:layout_below="@+id/rate_text"
+                            android:textSize="14sp"
+                            android:textColor="@color/font_gray"/>
+
+                        <TextView
+                            android:id="@+id/rate_cf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="次/分"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"
+                            android:layout_alignParentRight="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="——"
+                            android:textSize="16sp"
+                            android:layout_toLeftOf="@+id/rate_cf"
+                            android:textColor="#ff4767"
+                            android:layout_marginRight="5dp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/divier_style"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="燃烧脂肪"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:drawableLeft="@drawable/rate_zf"
+                        android:gravity="center"
+                        android:drawablePadding="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="心肺强化"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:drawableLeft="@drawable/rate_xf"
+                        android:gravity="center"
+                        android:drawablePadding="6dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="耐力强化"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
+                        android:drawableLeft="@drawable/rate_nl"
+                        android:gravity="center"
+                        android:drawablePadding="6dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/relative_round"
+                android:elevation="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/pressure_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:id="@+id/pressure_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/healthy_pressure"
+                        android:layout_centerVertical="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/pressure_img"
+                        android:layout_marginLeft="8dp">
+
+                        <TextView
+                            android:id="@+id/pressure_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血压"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="————"
+                            android:layout_below="@+id/pressure_text"
+                            android:textSize="14sp"
+                            android:textColor="@color/font_gray"/>
+
+                        <TextView
+                            android:id="@+id/pressure_mmhg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MMHG"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"
+                            android:layout_alignParentRight="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—/—"
+                            android:textSize="16sp"
+                            android:layout_toLeftOf="@+id/pressure_mmhg"
+                            android:textColor="#3edbe8"
+                            android:layout_marginRight="5dp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/divier_style"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/relative_round"
+                android:elevation="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/oxygen_bf_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <ImageView
+                        android:id="@+id/oxygen_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/healthy_oxygen"
+                        android:layout_centerVertical="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/oxygen_img"
+                        android:layout_marginLeft="8dp">
+
+                        <TextView
+                            android:id="@+id/oxygen_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血氧饱和度"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="————"
+                            android:layout_below="@+id/oxygen_text"
+                            android:textSize="14sp"
+                            android:textColor="@color/font_gray"/>
+
+                        <TextView
+                            android:id="@+id/oxygen_bf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textSize="16sp"
+                            android:textColor="@color/text_color"
+                            android:layout_alignParentRight="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—/—"
+                            android:textSize="16sp"
+                            android:layout_toLeftOf="@+id/oxygen_bf"
+                            android:textColor="#0ea362"
+                            android:layout_marginRight="5dp"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/divier_style"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

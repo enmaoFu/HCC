@@ -23,8 +23,10 @@
 
         <activity android:name=".ui.user.RegisterAty"/>
         <activity android:name=".ui.MainActivity"/>
-        <activity android:name=".ui.user.InviteFriendAty"/>
         <activity android:name=".ui.mining.WealthAty"/>
+        <activity android:name=".ui.mining.InviteFriendAty"/>
+        <activity android:name=".ui.mining.TreasureAty"/>
+        <activity android:name=".ui.mining.PromoteAty"/>
     </application>
 
 </manifest>

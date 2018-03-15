@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mining_re"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#769dfc">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我当前的挖宝算力：26"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的算力排名：13"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:background="@drawable/promote_bg"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="提升算力任务栏"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:lineSpacingMultiplier="1.5"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="完善一下平台账户信息，可快速提升算力，并同时获得HCC奖励。"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:lineSpacingMultiplier="1.5"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="健康联盟是HCC的一个APP应用，面向全球提供全面的个人病历和健康管理应用工具，该工具由去中心化的网络互动而形成，让个人成为数据的拥有者，达到数据资产的目的；健康矿由健康能量获得，健康能量越多，算力越大，得到的矿产余越丰富。"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:lineSpacingMultiplier="1.5"
+                    android:layout_centerVertical="true"/>
+
+            </LinearLayout>
+
+            <com.em.baseframe.view.gradview.GridViewForScrolview
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="10dp">
+            </com.em.baseframe.view.gradview.GridViewForScrolview>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

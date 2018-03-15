@@ -1,11 +1,16 @@
 package com.hcc.app.ui.mining;
 
+import android.annotation.SuppressLint;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.em.baseframe.view.statusbar.StatusBarUtil;
 import com.hcc.app.R;
 import com.hcc.app.base.BaseLazyFgt;
+import com.hcc.app.ui.MainActivity;
 
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -14,6 +19,9 @@ import butterknife.OnClick;
  * @author enmaoFu
  */
 public class MiningFgt extends BaseLazyFgt {
+
+    @BindView(R.id.mining_re)
+    RelativeLayout miningRe;
 
     @Override
     protected int getLayoutId() {
@@ -41,12 +49,18 @@ public class MiningFgt extends BaseLazyFgt {
 
     }
 
-    @OnClick({R.id.jbp})
+    @OnClick({R.id.treasure,R.id.friend,R.id.ptomote})
     @Override
     public void btnClick(View view) {
         switch (view.getId()){
-            case R.id.jbp:
-                startActivity(WealthAty.class,null);
+            case R.id.treasure:
+                startActivity(TreasureAty.class,null);
+                break;
+            case R.id.friend:
+                startActivity(InviteFriendAty.class,null);
+                break;
+            case R.id.ptomote:
+                startActivity(PromoteAty.class,null);
                 break;
         }
     }

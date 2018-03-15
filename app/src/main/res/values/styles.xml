@@ -25,6 +25,11 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <!-- toolbar 右边 menu item 字体颜色 -->
+    <style name="AppTheme.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionMenuTextColor">#ffffff</item>
+    </style>
+
     <!--分割线-->
     <style name="divier_style">
         <item name="android:layout_width">match_parent</item>

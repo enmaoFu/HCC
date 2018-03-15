@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/relative_round"
+    android:elevation="3dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_shop_price_re"
+        android:text="邀请五名好友激活邀请码"
+        android:textSize="14sp"
+        android:textColor="#404040"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/t_friend"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/promote_text_round"
+        android:layout_marginBottom="10dp"
+        android:text="+3算力"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+</LinearLayout>

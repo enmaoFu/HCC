@@ -1,15 +1,14 @@
-package com.hcc.app.ui.user;
+package com.hcc.app.ui.mining;
 
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import com.em.baseframe.adapter.recyclerview.BaseQuickAdapter;
 import com.hcc.app.R;
-import com.hcc.app.adapter.CaseNoteAdapter;
 import com.hcc.app.adapter.InviteFriendAdapter;
 import com.hcc.app.base.BaseAty;
-import com.hcc.app.pojo.CaseNotePojo;
 import com.hcc.app.pojo.InviteFriendPojo;
 
 import java.util.ArrayList;
@@ -26,6 +25,8 @@ public class InviteFriendAty extends BaseAty{
 
     @BindView(R.id.rv_data)
     RecyclerView rvData;
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
 
     //recyclerview布局管理器
     private RecyclerView.LayoutManager mLayoutManager;
@@ -41,6 +42,9 @@ public class InviteFriendAty extends BaseAty{
 
     @Override
     protected void initData() {
+
+        initToolbar(mToolbar,"邀请好友");
+
         //实例化布局管理器
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         //实例化适配器

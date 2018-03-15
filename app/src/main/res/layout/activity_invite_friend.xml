@@ -5,16 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/invite_bg">
 
-    <TextView
-        android:id="@+id/invite_title"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_size"
-        android:text="邀请好友"
-        android:textColor="#ffffff"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:background="#769dfc"
-        android:layout_alignParentTop="true"/>
+    <include layout="@layout/toolbar_layout"/>
 
     <TextView
         android:id="@+id/invite_down"
@@ -34,7 +25,7 @@
         android:src="@drawable/invite_logo"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
-        android:layout_below="@+id/invite_title"/>
+        android:layout_below="@+id/toolbar"/>
 
     <ImageView
         android:id="@+id/invite_lm"

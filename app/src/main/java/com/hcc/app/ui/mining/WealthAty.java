@@ -21,7 +21,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
- * @title  聚宝盆页面
+ * @title  收支记录页面
  * @date   2018/03/09
  * @author enmaoFu
  */
@@ -51,7 +51,7 @@ public class WealthAty extends BaseAty{
     @Override
     protected void initData() {
 
-        initToolbar(mToolbar,"聚宝盆");
+        initToolbar(mToolbar,"收支记录");
 
         miningWeek.setBackground(getResources().getDrawable(R.drawable.mining_text_round));
         miningWeek.setTextColor(Color.parseColor("#ffffff"));

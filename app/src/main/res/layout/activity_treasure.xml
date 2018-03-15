@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mining_re"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#769dfc"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/mining_treasure_text_round"
+            android:text="HCC余额"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥ 8536"
+            android:textSize="24dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/mining_treasure_round"
+            android:orientation="horizontal">
+            
+            <RelativeLayout
+                android:id="@+id/save_re"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mining_treasure_left_roundn">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/save_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/savey" />
+
+                    <TextView
+                        android:id="@+id/save_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="存入"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="6dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/take_re"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mining_treasure_right_roundy">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/take_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/tqn" />
+
+                    <TextView
+                        android:id="@+id/take_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提取"
+                        android:textColor="#769dfc"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="6dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/treasure_down"
+            android:layout_alignParentBottom="true"/>
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/mining_treasure_round1"
+            android:padding="6dp"
+            android:text="HCC是将去中心化的分布式结构方式，应用于医疗健康行业中的耗费资源巨大的基础医疗信息保存和流转环节，以节省大量的中介成本，通过安全的信任机制，解决现今大健康信息技术的安全认证缺陷，用灵活的可编程特性帮助医疗健康机构建立拓展应用。"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:lineSpacingMultiplier="2.0"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/mining_treasure_round1"
+                android:padding="8dp"
+                android:text="HCC是将去中心化的分布式结构方式，应用于医疗健康行业中的耗费资源巨大的基础医疗信息保存和流转环节，以节省大量的中介成本，通过安全的信任机制，解决现今大健康信息技术的安全认证缺陷，用灵活的可编程特性帮助医疗健康机构建立拓展应用。"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:lineSpacingMultiplier="1.5"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/treasure_fz"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

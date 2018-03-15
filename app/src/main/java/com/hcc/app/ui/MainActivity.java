@@ -12,6 +12,7 @@ import com.em.baseframe.base.BaseActivity;
 import com.em.baseframe.base.BaseLazyFragment;
 import com.em.baseframe.util.AppManger;
 import com.em.baseframe.view.navigation.BottomMenuView;
+import com.em.baseframe.view.statusbar.StatusBarUtil;
 import com.hcc.app.R;
 import com.hcc.app.ui.healthy.HealthyFgt;
 import com.hcc.app.ui.me.MeFgt;

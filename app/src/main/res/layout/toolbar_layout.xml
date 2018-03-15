@@ -16,7 +16,7 @@
     app:title=" "
     app:titleMarginStart="0dp"
     app:titleTextColor="@android:color/white"
-
+    android:theme="@style/AppTheme.ActionBar"
     >
     <ImageView
         android:layout_width="wrap_content"

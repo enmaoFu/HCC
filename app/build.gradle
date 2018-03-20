@@ -35,6 +35,9 @@ repositories {
     maven {
         url "https://jitpack.io"
     }
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
@@ -56,4 +59,9 @@ dependencies {
     compile 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
     //图表
     implementation files('libs/mpandroidchartlibrary-2-1-6.jar')
+    compile ('com.github.niorgai:StatusBarCompat:2.1.4', {
+        exclude group: 'com.android.support'
+    })
+    //手环包
+    compile(name: 'crpblelib-1.1.7', ext: 'aar')
 }

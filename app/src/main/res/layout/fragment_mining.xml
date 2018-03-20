@@ -4,21 +4,24 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/mining_bg_img"/>
+    android:fitsSystemWindows="true"
+    android:background="@drawable/mining_bg_img">
 
     <RelativeLayout
+        android:id="@+id/tor"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ptomote"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:background="@drawable/mining_re_sl_round"
         android:layout_marginRight="12dp"
         android:layout_alignParentRight="true"
         android:paddingLeft="14dp"
-        android:paddingRight="14dp">
+        android:paddingRight="14dp"
+        android:layout_below="@+id/tor">
 
         <TextView
             android:id="@+id/sl_text"
@@ -33,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="26"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="#ffffff"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/sl_text"
@@ -41,48 +44,62 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/treasure"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/mining_jbp_img"
-        android:text="聚宝盆"
-        android:gravity="center"
-        android:textSize="14sp"
-        android:textColor="#ffffff"
-        android:drawablePadding="5dp"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="12dp">
 
-    <TextView
-        android:id="@+id/ptomote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/mining_calculation"
-        android:text="提升算力"
-        android:gravity="center"
-        android:textSize="14sp"
-        android:textColor="#ffffff"
-        android:drawablePadding="5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="50dp"
-        android:layout_toRightOf="@+id/treasure"/>
+        <!--<TextView
+            android:id="@+id/ptomote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/mining_calculation"
+            android:text="提升算力"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"/>.-->
 
-    <TextView
-        android:id="@+id/friend"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableTop="@drawable/mining_friend"
-        android:text="邀请好友"
-        android:gravity="center"
-        android:textSize="14sp"
-        android:textColor="#ffffff"
-        android:drawablePadding="5dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="50dp"
-        android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/treasure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/mining_jbp_img"
+            android:text="聚宝盆"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"/>.
+
+        <TextView
+            android:id="@+id/friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/mining_friend"
+            android:text="邀请好友"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/youxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/game"
+            android:text="攻防战"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

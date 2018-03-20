@@ -13,6 +13,7 @@ import com.em.baseframe.view.statusbar.StatusBarUtil;
 import com.hcc.app.R;
 import com.hcc.app.base.BaseLazyFgt;
 import com.hcc.app.config.UserManeger;
+import com.orhanobut.logger.Logger;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -27,6 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * @title  医疗信息fragemnt
@@ -59,7 +61,8 @@ public class MedicalInformationFgt extends BaseLazyFgt{
     protected void initData() {
 
         //在第一次进入并创建页面，初始化数据的时候，初始化默认的状态栏颜色，防止因为操作顺序和逻辑不同而导致的颜色混乱问题
-        UserManeger.setStatusBarColor("#769dfc");
+        UserManeger.setStatusBarColor(R.color.colorPrimary);
+        setStatusBar(R.color.colorPrimary);
 
         mFragments = new ArrayList<>();
         mTabsString = new ArrayList<>();
@@ -85,20 +88,20 @@ public class MedicalInformationFgt extends BaseLazyFgt{
                 int number = mViewPager.getCurrentItem();
                 switch (number){
                     case 0:
-                        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.caseNote),00);
-                        UserManeger.setStatusBarColor("#769dfc");
+                        setStatusBar(R.color.caseNote);
+                        UserManeger.setStatusBarColor(R.color.caseNote);
                         break;
                     case 1:
-                        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.checkNote),00);
-                        UserManeger.setStatusBarColor("#6f86d6");
+                        setStatusBar(R.color.checkNote);
+                        UserManeger.setStatusBarColor(R.color.checkNote);
                         break;
                     case 2:
-                        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.testNote),00);
-                        UserManeger.setStatusBarColor("#73afd3");
+                        setStatusBar(R.color.testNote);
+                        UserManeger.setStatusBarColor(R.color.testNote);
                         break;
                     case 3:
-                        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.prescriptionNote),00);
-                        UserManeger.setStatusBarColor("#00cdac");
+                        setStatusBar(R.color.prescriptionNote);
+                        UserManeger.setStatusBarColor(R.color.prescriptionNote);
                         break;
                 }
             }
@@ -111,6 +114,10 @@ public class MedicalInformationFgt extends BaseLazyFgt{
 
         initMagicIndicator();
 
+    }
+
+    private void setStatusBar(int color) {
+        StatusBarCompat.setStatusBarColor(getActivity(), getResources().getColor(color));
     }
 
     @Override
@@ -126,7 +133,7 @@ public class MedicalInformationFgt extends BaseLazyFgt{
     @Override
     public void onUserVisible() {
         super.onUserVisible();
-        StatusBarUtil.setColor(getActivity(), Color.parseColor(UserManeger.getStatusBarColor()),00);
+        setStatusBar(UserManeger.getStatusBarColor());
     }
 
     private void initMagicIndicator() {

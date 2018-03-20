@@ -1,5 +1,8 @@
 package com.hcc.app.application;
 
+import android.content.Context;
+
+import com.crrepa.ble.CRPBleClient;
 import com.em.baseframe.application.BaseApplication;
 
 /**
@@ -8,4 +11,18 @@ import com.em.baseframe.application.BaseApplication;
  * @author enmaoFu
  */
 public class MyApplication extends BaseApplication{
+
+    private CRPBleClient mBleClient;
+
+    public static CRPBleClient getBleClient(Context context) {
+        MyApplication application = (MyApplication) context.getApplicationContext();
+        return application.mBleClient;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mBleClient = CRPBleClient.create(this);
+    }
+
 }

@@ -14,14 +14,17 @@ import com.em.baseframe.view.statusbar.StatusBarUtil;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.hcc.app.R;
 import com.hcc.app.base.BaseLazyFgt;
+import com.hcc.app.ui.MainActivity;
 import com.jzxiang.pickerview.TimePickerDialog;
 import com.jzxiang.pickerview.data.Type;
 import com.jzxiang.pickerview.listener.OnDateSetListener;
+import com.orhanobut.logger.Logger;
 
 import java.util.zip.Inflater;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * @title  我fragemnt
@@ -43,7 +46,7 @@ public class MeFgt extends BaseLazyFgt {
     @Override
     protected void initData() {
 
-        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.colorPrimary),00);
+        setStatusBar();
 
         Uri uri = Uri.parse("http://wx1.sinaimg.cn/thumb150/006DLFVFgy1fop6mhqouyj30xc0xc0y0.jpg");
         meHead.setImageURI(uri);
@@ -52,7 +55,12 @@ public class MeFgt extends BaseLazyFgt {
     @Override
     public void onUserVisible() {
         super.onUserVisible();
-        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.colorPrimary),00);
+        Logger.v("---------");
+        setStatusBar();
+    }
+
+    private void setStatusBar() {
+        StatusBarCompat.setStatusBarColor(getActivity(), getResources().getColor(R.color.colorPrimary));
     }
 
     @Override
@@ -65,7 +73,8 @@ public class MeFgt extends BaseLazyFgt {
 
     }
 
-    @OnClick({R.id.me_head_re,R.id.me_blood_ype,R.id.me_allergy,R.id.me_height,R.id.me_birth_date})
+    @OnClick({R.id.me_head_re,R.id.me_blood_ype,R.id.me_allergy,R.id.me_height,R.id.me_birth_date,R.id.family_re,
+    R.id.identity_re})
     @Override
     public void btnClick(View view) {
         switch (view.getId()){
@@ -177,6 +186,12 @@ public class MeFgt extends BaseLazyFgt {
                             }
                         })
                         .create().show();
+                break;
+            case R.id.family_re:
+                startActivity(FamilyAty.class,null);
+                break;
+            case R.id.identity_re:
+                startActivity(IdentityAty.class,null);
                 break;
         }
     }

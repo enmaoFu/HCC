@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import qiu.niorgai.StatusBarCompat;
 
 
 /**
@@ -54,7 +55,8 @@ public class HealthyFgt extends BaseLazyFgt {
     @Override
     protected void initData() {
 
-        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.colorPrimary),00);
+        //透明状态栏
+        setStatusBar();
 
         mFragments = new ArrayList<>();
         mTabsString = new ArrayList<>();
@@ -92,7 +94,12 @@ public class HealthyFgt extends BaseLazyFgt {
     @Override
     public void onUserVisible() {
         super.onUserVisible();
-        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.colorPrimary),00);
+        //透明状态栏
+        setStatusBar();
+    }
+
+    private void setStatusBar() {
+        StatusBarCompat.setStatusBarColor(getActivity(), getResources().getColor(R.color.colorPrimary));
     }
 
     @Override

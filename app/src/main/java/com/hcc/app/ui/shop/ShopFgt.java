@@ -20,6 +20,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * @title  商店fragemnt
@@ -52,7 +53,8 @@ public class ShopFgt extends BaseLazyFgt {
     @Override
     protected void initData() {
 
-        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.colorPrimary),00);
+        //透明状态栏
+        setStatusBar();
 
         //实例化布局管理器
         mLayoutManager = new GridLayoutManager(getActivity(), 2);
@@ -81,7 +83,12 @@ public class ShopFgt extends BaseLazyFgt {
     @Override
     public void onUserVisible() {
         super.onUserVisible();
-        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.colorPrimary),00);
+        //透明状态栏
+        setStatusBar();
+    }
+
+    private void setStatusBar() {
+        StatusBarCompat.setStatusBarColor(getActivity(), getResources().getColor(R.color.colorPrimary));
     }
 
     @Override

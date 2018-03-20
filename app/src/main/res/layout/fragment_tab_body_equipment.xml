@@ -25,6 +25,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/add_device"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/relative_round"
@@ -431,6 +432,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/pressure_lin"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:background="@drawable/relative_round"

@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * @title  病历fragemnt

@@ -1,10 +1,19 @@
 package com.hcc.app.ui.mining;
 
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
+import android.app.Activity;
+import android.graphics.Color;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
+import com.em.baseframe.base.BaseActivity;
 import com.em.baseframe.view.statusbar.StatusBarUtil;
 import com.hcc.app.R;
 import com.hcc.app.base.BaseLazyFgt;
@@ -12,6 +21,7 @@ import com.hcc.app.ui.MainActivity;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * @title  挖矿fragemnt
@@ -20,8 +30,10 @@ import butterknife.OnClick;
  */
 public class MiningFgt extends BaseLazyFgt {
 
-    @BindView(R.id.mining_re)
-    RelativeLayout miningRe;
+    /**
+     * 透明状态栏（图片）
+     */
+    private boolean isHide = false;
 
     @Override
     protected int getLayoutId() {
@@ -30,13 +42,21 @@ public class MiningFgt extends BaseLazyFgt {
 
     @Override
     protected void initData() {
-        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.colorPrimary),00);
+        //透明状态栏
+        setStatusBar();
     }
+
 
     @Override
     public void onUserVisible() {
         super.onUserVisible();
-        StatusBarUtil.setColor(getActivity(), getResources().getColor(R.color.colorPrimary),00);
+        //透明状态栏
+        setStatusBar();
+    }
+
+    private void setStatusBar() {
+        StatusBarCompat.setStatusBarColor(getActivity(), getResources().getColor(R.color.colorPrimary));
+        StatusBarCompat.translucentStatusBar(getActivity(), isHide);
     }
 
     @Override

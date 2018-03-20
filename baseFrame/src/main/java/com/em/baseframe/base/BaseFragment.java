@@ -87,7 +87,7 @@ public abstract class BaseFragment extends Fragment implements HttpCallBack{
         // 设置是否是初始化网络操作
         isInitRequestData = setIsInitRequestData();
 
-        initStatusBar();
+        //initStatusBar();
 
         initData();
 

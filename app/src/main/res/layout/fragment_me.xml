@@ -102,6 +102,47 @@
                 </View>
 
                 <RelativeLayout
+                    android:id="@+id/identity_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身份认证"
+                        android:textSize="16sp"
+                        android:textColor="@color/font_black_new"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未认证"
+                        android:textSize="12sp"
+                        android:textColor="@color/font_gray"
+                        android:layout_toLeftOf="@+id/right0"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageView
+                        android:id="@+id/right0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/right"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"/>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/divier_style"
+                    android:layout_marginLeft="20dp">
+                </View>
+
+                <RelativeLayout
                     android:id="@+id/me_birth_date"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -116,7 +157,18 @@
                         android:layout_marginLeft="20dp"
                         android:layout_centerVertical="true"/>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未设置"
+                        android:textSize="12sp"
+                        android:textColor="@color/font_gray"
+                        android:layout_toLeftOf="@+id/right1"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"/>
+
                     <ImageView
+                        android:id="@+id/right1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/right"
@@ -146,7 +198,18 @@
                         android:layout_marginLeft="20dp"
                         android:layout_centerVertical="true"/>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未设置"
+                        android:textSize="12sp"
+                        android:textColor="@color/font_gray"
+                        android:layout_toLeftOf="@+id/right2"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"/>
+
                     <ImageView
+                        android:id="@+id/right2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/right"
@@ -176,7 +239,18 @@
                         android:layout_marginLeft="20dp"
                         android:layout_centerVertical="true"/>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未设置"
+                        android:textSize="12sp"
+                        android:textColor="@color/font_gray"
+                        android:layout_toLeftOf="@+id/right3"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"/>
+
                     <ImageView
+                        android:id="@+id/right3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/right"
@@ -206,7 +280,18 @@
                         android:layout_marginLeft="20dp"
                         android:layout_centerVertical="true"/>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未设置"
+                        android:textSize="12sp"
+                        android:textColor="@color/font_gray"
+                        android:layout_toLeftOf="@+id/right4"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"/>
+
                     <ImageView
+                        android:id="@+id/right4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/right"
@@ -235,7 +320,18 @@
                         android:layout_marginLeft="20dp"
                         android:layout_centerVertical="true"/>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未设置"
+                        android:textSize="12sp"
+                        android:textColor="@color/font_gray"
+                        android:layout_toLeftOf="@+id/right5"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"/>
+
                     <ImageView
+                        android:id="@+id/right5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/right"
@@ -255,6 +351,7 @@
                 android:layout_marginBottom="8dp">
 
                 <RelativeLayout
+                    android:id="@+id/family_re"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="#ffffff">
@@ -275,123 +372,6 @@
                         android:layout_centerVertical="true"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="12dp"/>
-
-                </RelativeLayout>
-
-                <View
-                    style="@style/divier_style"
-                    android:layout_marginLeft="20dp">
-                </View>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="#ffffff">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="父亲账号"
-                        android:textSize="16sp"
-                        android:textColor="@color/font_black_new"
-                        android:layout_marginLeft="20dp"
-                        android:layout_centerVertical="true"/>
-
-                    <ImageView
-                        android:id="@+id/father_right"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="12dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toLeftOf="@+id/father_right"
-                        android:text="未填写"
-                        android:textSize="16sp"
-                        android:textColor="@color/font_gray_new"
-                        android:layout_centerVertical="true"/>
-
-                </RelativeLayout>
-
-                <View
-                    style="@style/divier_style"
-                    android:layout_marginLeft="20dp">
-                </View>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="#ffffff">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="母亲账号"
-                        android:textSize="16sp"
-                        android:textColor="@color/font_black_new"
-                        android:layout_marginLeft="20dp"
-                        android:layout_centerVertical="true"/>
-
-                    <ImageView
-                        android:id="@+id/mother_right"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="12dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toLeftOf="@+id/mother_right"
-                        android:text="未填写"
-                        android:textSize="16sp"
-                        android:textColor="@color/font_gray_new"
-                        android:layout_centerVertical="true"/>
-
-                </RelativeLayout>
-
-                <View
-                    style="@style/divier_style"
-                    android:layout_marginLeft="20dp">
-                </View>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="#ffffff">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="兄弟姐妹账号"
-                        android:textSize="16sp"
-                        android:textColor="@color/font_black_new"
-                        android:layout_marginLeft="20dp"
-                        android:layout_centerVertical="true"/>
-
-                    <ImageView
-                        android:id="@+id/sister_right"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/right"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="12dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toLeftOf="@+id/sister_right"
-                        android:text="未填写"
-                        android:textSize="16sp"
-                        android:textColor="@color/font_gray_new"
-                        android:layout_centerVertical="true"/>
 
                 </RelativeLayout>
 

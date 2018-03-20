@@ -27,6 +27,9 @@
         <activity android:name=".ui.mining.InviteFriendAty"/>
         <activity android:name=".ui.mining.TreasureAty"/>
         <activity android:name=".ui.mining.PromoteAty"/>
+        <activity android:name=".ui.BleDeviceBindingActivity"/>
+        <activity android:name=".ui.me.FamilyAty"/>
+        <activity android:name=".ui.me.IdentityAty"/>
     </application>
 
 </manifest>

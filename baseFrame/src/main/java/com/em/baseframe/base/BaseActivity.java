@@ -1,12 +1,18 @@
 package com.em.baseframe.base;
 
+import android.annotation.TargetApi;
+import android.app.ActionBar;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
@@ -62,6 +68,7 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         //设置输入框模式
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN| WindowManager.LayoutParams.SOFT_INPUT_STATE_UNSPECIFIED);
+
         super.onCreate(savedInstanceState);
 
         AppManger.getInstance().addActivity(this);
@@ -70,6 +77,7 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
         isInitRequestData = setIsInitRequestData();
 
         setContentView(R.layout.frame_base_layout);
+
         FrameLayout content = (FrameLayout) findViewById(R.id.content);
 
         View contentView = null;
@@ -94,7 +102,7 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
 
         ButterKnife.bind(this);
 
-        initStatusBar();
+        //initStatusBar();
 
         initData();
 
@@ -103,7 +111,6 @@ public abstract class BaseActivity extends AppCompatActivity implements HttpCall
     }
 
     //======================================初始化
-
     /**
      * 布局文件ID
      *

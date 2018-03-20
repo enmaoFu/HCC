@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * @title  检查单fragemnt

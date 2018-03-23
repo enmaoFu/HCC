@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.em.baseframe.adapter.recyclerview.BaseQuickAdapter;
+import com.em.baseframe.adapter.recyclerview.listener.OnItemClickListener;
 import com.em.baseframe.util.AppJsonUtil;
 import com.em.baseframe.util.RetrofitUtils;
 import com.em.baseframe.view.refresh.PtrInitHelper;
@@ -99,6 +100,13 @@ public class ShopFgt extends BaseLazyFgt {
                         .color(Color.parseColor(getResources().getString(R.string.parseColor)))
                         .sizeResId(R.dimen.size_0_5p)
                         .build());*/
+        //设置item点击事件
+        rvData.addOnItemTouchListener(new OnItemClickListener() {
+            @Override
+            public void onSimpleItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(ShopDetiasAty.class, null);
+            }
+        });
         //大小不受适配器影响
         rvData.setHasFixedSize(true);
         //设置加载动画类型

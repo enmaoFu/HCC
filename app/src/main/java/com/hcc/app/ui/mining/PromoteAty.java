@@ -24,8 +24,10 @@ public class PromoteAty extends BaseAty{
 
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
-    @BindView(R.id.gridview)
-    GridViewForScrolview gridview;
+    @BindView(R.id.dq_gridview)
+    GridViewForScrolview dqGridview;
+    @BindView(R.id.jd_gridview)
+    GridViewForScrolview jdGridview;
     @BindView(R.id.scroll)
     ScrollView scrollView;
 
@@ -41,8 +43,12 @@ public class PromoteAty extends BaseAty{
     protected void initData() {
         initToolbar(mToolbar,"提升算力");
         promoteAdapter = new PromoteAdapter(this, setData(), R.layout.item_promote);
-        gridview.setAdapter(promoteAdapter);
-        gridview.setFocusable(false);
+        dqGridview.setAdapter(promoteAdapter);
+        dqGridview.setFocusable(false);
+
+        promoteAdapter = new PromoteAdapter(this, setData(), R.layout.item_promote);
+        jdGridview.setAdapter(promoteAdapter);
+        jdGridview.setFocusable(false);
         scrollView.smoothScrollTo(0,20);
     }
 
@@ -54,7 +60,7 @@ public class PromoteAty extends BaseAty{
     public List<PromotePojo> setData(){
         promotePojos = new ArrayList<>();
         PromotePojo paPromotePojo = null;
-        for(int i = 0; i < 16; i++){
+        for(int i = 0; i < 4; i++){
             paPromotePojo = new PromotePojo("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2577947464,883329486&fm=27&gp=0.jpg");
             promotePojos.add(paPromotePojo);
         }

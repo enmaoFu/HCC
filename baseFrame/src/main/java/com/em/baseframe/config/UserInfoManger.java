@@ -9,7 +9,15 @@ import com.em.baseframe.util.SPUtils;
  */
 public abstract class UserInfoManger {
 
+	/**
+	 * 登陆状态
+	 */
 	public static final String FILE = "userConfig";
+
+	/**
+	 * openid（token）
+	 */
+	private static final String OPEN_ID = "openid";
 
 	/**
 	 * 获得登陆状态
@@ -27,8 +35,22 @@ public abstract class UserInfoManger {
 		spUtils.put("isLogin", b);
 	}
 
-	
-		
-	
+	/**
+	 * 保存openid（token）
+	 * @param openid
+	 */
+	public static void setOpenid(String openid) {
+		SPUtils spUtils = new SPUtils(FILE);
+		spUtils.put(OPEN_ID, openid);
+	}
+
+	/**
+	 * 获取openid（token）
+	 * @return
+	 */
+	public static String getOpenid() {
+		SPUtils spUtils = new SPUtils(FILE);
+		return (String) spUtils.get(OPEN_ID, "");
+	}
 
 }

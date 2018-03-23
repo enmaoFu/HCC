@@ -97,7 +97,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="步数"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"/>
 
                         <TextView
@@ -105,7 +105,7 @@
                             android:layout_height="wrap_content"
                             android:text="2018-03-03 12:02:03"
                             android:layout_below="@+id/step_text"
-                            android:textSize="14sp"
+                            android:textSize="12sp"
                             android:textColor="@color/font_gray"/>
 
                         <TextView
@@ -113,7 +113,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="步"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"
                             android:layout_alignParentRight="true"/>
 
@@ -121,7 +121,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_toLeftOf="@+id/step_b"
                             android:textColor="#769dfc"
                             android:layout_marginRight="5dp"/>
@@ -132,7 +132,7 @@
                             android:text="目标：10000步"
                             android:layout_below="@+id/step_text"
                             android:layout_alignParentRight="true"
-                            android:textSize="14sp"
+                            android:textSize="12sp"
                             android:textColor="@color/font_gray"/>
 
                     </RelativeLayout>
@@ -225,7 +225,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="睡眠"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"/>
 
                         <TextView
@@ -233,7 +233,7 @@
                             android:layout_height="wrap_content"
                             android:text="2018-03-03 12:02:03"
                             android:layout_below="@+id/sleep_text"
-                            android:textSize="14sp"
+                            android:textSize="12sp"
                             android:textColor="@color/font_gray"/>
 
                         <TextView
@@ -241,7 +241,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="分"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"
                             android:layout_alignParentRight="true"/>
 
@@ -250,7 +250,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="——"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_toLeftOf="@+id/sleep_f"
                             android:textColor="#c2a8dd"
                             android:layout_marginRight="5dp"/>
@@ -260,7 +260,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="时"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_toLeftOf="@+id/sleep_f_text"
                             android:layout_marginRight="5dp"/>
 
@@ -269,7 +269,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="——"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_toLeftOf="@+id/sleep_s"
                             android:textColor="#c2a8dd"
                             android:layout_marginRight="5dp"/>
@@ -280,7 +280,7 @@
                             android:text="10小时"
                             android:layout_below="@+id/sleep_text"
                             android:layout_alignParentRight="true"
-                            android:textSize="14sp"
+                            android:textSize="12sp"
                             android:textColor="@color/font_gray"/>
 
                     </RelativeLayout>
@@ -348,7 +348,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="运动心率"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"/>
 
                         <TextView
@@ -356,7 +356,7 @@
                             android:layout_height="wrap_content"
                             android:text="————"
                             android:layout_below="@+id/rate_text"
-                            android:textSize="14sp"
+                            android:textSize="12sp"
                             android:textColor="@color/font_gray"/>
 
                         <TextView
@@ -364,7 +364,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="次/分"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"
                             android:layout_alignParentRight="true"/>
 
@@ -372,7 +372,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="——"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_toLeftOf="@+id/rate_cf"
                             android:textColor="#ff4767"
                             android:layout_marginRight="5dp"/>
@@ -468,7 +468,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="血压"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"/>
 
                         <TextView
@@ -484,7 +484,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="MMHG"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"
                             android:layout_alignParentRight="true"/>
 
@@ -492,7 +492,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="—/—"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_toLeftOf="@+id/pressure_mmhg"
                             android:textColor="#3edbe8"
                             android:layout_marginRight="5dp"/>
@@ -555,7 +555,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="血氧饱和度"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"/>
 
                         <TextView
@@ -571,7 +571,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="%"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:textColor="@color/text_color"
                             android:layout_alignParentRight="true"/>
 
@@ -579,7 +579,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="—/—"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             android:layout_toLeftOf="@+id/oxygen_bf"
                             android:textColor="#0ea362"
                             android:layout_marginRight="5dp"/>

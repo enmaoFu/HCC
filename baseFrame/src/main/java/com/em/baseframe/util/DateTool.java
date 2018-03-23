@@ -60,6 +60,16 @@ public class DateTool {
         return re_StrTime;
     }*/
 
+    /**
+     * 时间戳转换成字符窜
+     * @param time
+     * @return
+     */
+    public static String getDateToString(long time) {
+        Date d = new Date(time);
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
+        return sf.format(d);
+    }
 
     /**
      * 将短时间格式时间转换为字符串 yyyy-MM-dd

@@ -25,7 +25,7 @@ public class RetrofitUtils {
         return singleton;
     }
 
-    public static void init(String token,String uuid) {
+    public static void init(String token) {
         if (singleton == null||token!=null) {
             synchronized (RetrofitUtils.class) {
                 if (singleton == null|| token!=null) {
@@ -35,7 +35,7 @@ public class RetrofitUtils {
 
                     singleton = new Retrofit.Builder()
                             .baseUrl(HttpConfig.BASE_URL)
-                            .client(OkHttpUtils.getInstance(token,uuid))
+                            .client(OkHttpUtils.getInstance(token))
                             .build();
 
                 }
@@ -43,7 +43,7 @@ public class RetrofitUtils {
         }
 
     }
-    public static void init(String token,String uuid,String url) {
+    public static void init(String token,String url) {
         if (singleton == null||token!=null) {
             synchronized (RetrofitUtils.class) {
                 if (singleton == null|| token!=null) {
@@ -53,7 +53,7 @@ public class RetrofitUtils {
 
                     singleton = new Retrofit.Builder()
                             .baseUrl(url)
-                            .client(OkHttpUtils.getInstance(token,uuid))
+                            .client(OkHttpUtils.getInstance(token))
                             .build();
 
                 }

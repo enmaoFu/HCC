@@ -1,5 +1,6 @@
 package com.hcc.app.ui.shop;
 
+import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,18 +10,28 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.em.baseframe.adapter.recyclerview.BaseQuickAdapter;
+import com.em.baseframe.util.AppJsonUtil;
+import com.em.baseframe.util.RetrofitUtils;
+import com.em.baseframe.view.refresh.PtrInitHelper;
 import com.em.baseframe.view.statusbar.StatusBarUtil;
+import com.em.refresh.PtrDefaultHandler;
+import com.em.refresh.PtrFrameLayout;
 import com.hcc.app.R;
 import com.hcc.app.adapter.ShopAdapter;
 import com.hcc.app.base.BaseLazyFgt;
+import com.hcc.app.http.ShopInterface;
 import com.hcc.app.pojo.ShopPojo;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import okhttp3.ResponseBody;
 import qiu.niorgai.StatusBarCompat;
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * @title  商店fragemnt
@@ -31,6 +42,8 @@ public class ShopFgt extends BaseLazyFgt {
 
     @BindView(R.id.rv_data)
     RecyclerView rvData;
+    @BindView(R.id.ptr_frame)
+    PtrFrameLayout mPtrFrame;
 
     /**
      * recyclerview布局管理器
@@ -45,6 +58,11 @@ public class ShopFgt extends BaseLazyFgt {
      */
     private List<ShopPojo> shopPojos;
 
+    /**
+     * 用来标记是否在加载
+     */
+    private boolean isLoading = false;
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_shop;
@@ -56,11 +74,23 @@ public class ShopFgt extends BaseLazyFgt {
         //透明状态栏
         setStatusBar();
 
+        PtrInitHelper.initPtr(getActivity(), mPtrFrame);
+
+        /**
+         * 下拉刷新
+         */
+        mPtrFrame.setPtrHandler(new PtrDefaultHandler() {
+            @Override
+            public void onRefreshBegin(PtrFrameLayout frame) {
+                doHttp(RetrofitUtils.createApi(ShopInterface.class).store(),1);
+            }
+        });
+
         //实例化布局管理器
         mLayoutManager = new GridLayoutManager(getActivity(), 2);
         //mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         //实例化适配器
-        shopAdapter = new ShopAdapter(R.layout.item_shop, setData());
+        shopAdapter = new ShopAdapter(R.layout.item_shop, new ArrayList<ShopPojo>());
         //设置布局管理器
         rvData.setLayoutManager(mLayoutManager);
         //设置间隔样式
@@ -81,10 +111,21 @@ public class ShopFgt extends BaseLazyFgt {
     }
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        showLoadingContentDialog();
+    }
+
+    @Override
     public void onUserVisible() {
         super.onUserVisible();
-        //透明状态栏
         setStatusBar();
+    }
+
+    @Override
+    public void onUserInvisible() {
+        super.onUserInvisible();
+        isLoading = false;
     }
 
     private void setStatusBar() {
@@ -98,22 +139,38 @@ public class ShopFgt extends BaseLazyFgt {
 
     @Override
     protected void requestData() {
-
+        doHttp(RetrofitUtils.createApi(ShopInterface.class).store(),1);
     }
 
-    /**
-     * 设置数据
-     * @return
-     */
-    public List<ShopPojo> setData(){
-        shopPojos = new ArrayList<>();
-        ShopPojo shopPojo = null;
-        for(int i = 0; i < 16; i++){
-            shopPojo = new ShopPojo("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2577947464,883329486&fm=27&gp=0.jpg",
-            "运动手腕","300" + "人参与","¥" + "858","¥" + "1800");
-            shopPojos.add(shopPojo);
+    @Override
+    public void onSuccess(String result, Call<ResponseBody> call, Response<ResponseBody> response, int what) {
+        super.onSuccess(result, call, response, what);
+        isLoading = false;
+        switch (what){
+            case 1:
+                mPtrFrame.refreshComplete();
+                shopAdapter.removeAll();
+                shopPojos = AppJsonUtil.getArrayList(result, ShopPojo.class);
+                shopAdapter.setNewData(shopPojos);
+                break;
         }
-        return shopPojos;
     }
 
+    @Override
+    public void onFailure(String result, Call<ResponseBody> call, Response<ResponseBody> response, int what) {
+        super.onFailure(result, call, response, what);
+        if (mPtrFrame != null) {
+            mPtrFrame.refreshComplete();
+        }
+        isLoading = false;
+    }
+
+    @Override
+    public void onError(Call<ResponseBody> call, Throwable t, int what) {
+        super.onError(call, t, what);
+        if (mPtrFrame != null) {
+            mPtrFrame.refreshComplete();
+        }
+        isLoading = false;
+    }
 }

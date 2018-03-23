@@ -38,6 +38,7 @@
             android:layout_toRightOf="@+id/phone"/>
 
         <EditText
+            android:id="@+id/phone_ed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/login_select_number"
@@ -91,7 +92,7 @@
             android:layout_toRightOf="@+id/code_left"/>
 
         <EditText
-            android:id="@+id/input_pwd"
+            android:id="@+id/pwd_ed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toRightOf="@+id/register_code"
@@ -120,7 +121,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/btn_login"
+        android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="18dp"
@@ -143,7 +144,7 @@
         android:layout_marginRight="18dp"
         android:layout_alignParentRight="true"
         android:padding="4dp"
-        android:layout_below="@+id/btn_login"/>
+        android:layout_below="@+id/login_btn"/>
 
     <LinearLayout
         android:id="@+id/down"
@@ -152,7 +153,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="60dp"
-        android:layout_below="@+id/btn_login"
+        android:layout_below="@+id/login_btn"
         android:layout_marginLeft="18dp"
         android:layout_marginRight="18dp">
 

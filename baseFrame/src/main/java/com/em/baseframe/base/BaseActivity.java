@@ -30,6 +30,7 @@ import com.em.baseframe.view.statusbar.StatusBarUtil;
 import com.orhanobut.logger.Logger;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.PrintStream;
 
 import butterknife.ButterKnife;

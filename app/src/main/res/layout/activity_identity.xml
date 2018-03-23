@@ -57,27 +57,35 @@
                     android:background="@drawable/relative_identity_round">
 
                     <TextView
-                        android:id="@+id/name"
+                        android:id="@+id/identity_username"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="城市猎人"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="50dp"
                         android:textColor="@color/text_color"
                         android:textSize="18sp"/>
 
                     <ImageView
+                        android:id="@+id/identity_is"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/rzy"
                         android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/name"
+                        android:layout_below="@+id/identity_username"
                         android:layout_marginTop="10dp"/>
+
+                    <ImageView
+                        android:id="@+id/identity_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rzbj"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"/>
 
                 </RelativeLayout>
 
                 <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/head"
+                    android:id="@+id/identity_head"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
@@ -104,6 +112,7 @@
                 android:layout_marginTop="10dp">
 
                 <RelativeLayout
+                    android:id="@+id/identity_name_re"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="#ffffff">
@@ -112,17 +121,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="姓名"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textColor="@color/font_black_new"
                         android:layout_marginLeft="20dp"
                         android:layout_centerVertical="true"/>
 
                     <TextView
+                        android:id="@+id/identity_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="张三"
-                        android:textSize="16sp"
-                        android:textColor="@color/font_black_new"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
                         android:layout_marginRight="20dp"
                         android:layout_centerVertical="true"
                         android:layout_alignParentRight="true"/>
@@ -135,6 +145,7 @@
                 </View>
 
                 <RelativeLayout
+                    android:id="@+id/identity_number_re"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="#ffffff">
@@ -143,17 +154,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="身份证号"
-                        android:textSize="16sp"
+                        android:textSize="14sp"
                         android:textColor="@color/font_black_new"
                         android:layout_marginLeft="20dp"
                         android:layout_centerVertical="true"/>
 
                     <TextView
+                        android:id="@+id/identity_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="3*********************8"
-                        android:textSize="16sp"
-                        android:textColor="@color/font_black_new"
+                        android:textSize="14sp"
+                        android:textColor="@color/text_color"
                         android:layout_marginRight="20dp"
                         android:layout_centerVertical="true"
                         android:layout_alignParentRight="true"/>
@@ -162,7 +174,21 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/identity_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/relative_identity_text_round"
+                android:text="申请认证"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:gravity="center"/>
+
+            <!--<LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -180,27 +206,109 @@
                     android:paddingTop="12dp"
                     android:paddingBottom="30dp"/>
 
-                <ImageView
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/sfz_z"
-                    android:layout_gravity="center"/>
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/sfz_f"
-                    android:layout_marginTop="30dp"
-                    android:layout_gravity="center"/>
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sfz_z"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:actualImageScaleType="centerCrop"
+                        app:failureImage="@drawable/head"
+                        app:failureImageScaleType="centerCrop"
+                        app:placeholderImage="@drawable/sfz_z"
+                        app:placeholderImageScaleType="centerCrop">
+                    </com.facebook.drawee.view.SimpleDraweeView>
 
-                <ImageView
+                    <TextView
+                        android:id="@+id/sfz_z_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身份证正面扫描上传"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="70dp"
+                        android:textSize="16sp"
+                        android:textColor="#8c949a"
+                        android:drawableTop="@drawable/xj"
+                        android:drawablePadding="6dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/sfz_sc"
-                    android:layout_marginTop="30dp"
-                    android:layout_gravity="center"/>
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sfz_f"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:actualImageScaleType="centerCrop"
+                        app:failureImage="@drawable/head"
+                        app:failureImageScaleType="centerCrop"
+                        app:placeholderImage="@drawable/sfz_f"
+                        app:placeholderImageScaleType="centerCrop">
+                    </com.facebook.drawee.view.SimpleDraweeView>
+
+                    <TextView
+                        android:id="@+id/sfz_f_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身份证反面扫描上传"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="70dp"
+                        android:textSize="16sp"
+                        android:textColor="#8c949a"
+                        android:drawableTop="@drawable/xj"
+                        android:drawablePadding="6dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sfz_sc"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:actualImageScaleType="centerCrop"
+                        app:failureImage="@drawable/head"
+                        app:failureImageScaleType="centerCrop"
+                        app:placeholderImage="@drawable/sfz_sc"
+                        app:placeholderImageScaleType="centerCrop">
+                    </com.facebook.drawee.view.SimpleDraweeView>
+
+                    <TextView
+                        android:id="@+id/sfz_sc_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="手持身份证自拍证明您是本人"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="70dp"
+                        android:textSize="16sp"
+                        android:textColor="#8c949a"
+                        android:drawableTop="@drawable/xj"
+                        android:drawablePadding="6dp"/>
+
+                </RelativeLayout>
                 
                 <TextView
+                    android:id="@+id/identity_btn"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginLeft="20dp"
@@ -213,7 +321,7 @@
                     android:textColor="#ffffff"
                     android:gravity="center"/>
 
-            </LinearLayout>
+            </LinearLayout>-->
 
         </LinearLayout>
 

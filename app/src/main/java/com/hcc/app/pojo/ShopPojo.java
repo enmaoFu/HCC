@@ -7,30 +7,24 @@ package com.hcc.app.pojo;
  */
 public class ShopPojo {
 
-    private String img;
+    private int id;
 
     private String title;
 
-    private String number;
+    private String pid;
 
-    private String price;
+    private int money;
 
-    private String usedPrice;
+    private int nowmoney;
 
-    public ShopPojo(String img, String title, String number, String price, String usedPrice) {
-        this.img = img;
-        this.title = title;
-        this.number = number;
-        this.price = price;
-        this.usedPrice = usedPrice;
+    private int pnum;
+
+    public int getId() {
+        return id;
     }
 
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -41,27 +35,35 @@ public class ShopPojo {
         this.title = title;
     }
 
-    public String getNumber() {
-        return number;
+    public String getPid() {
+        return pid;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setPid(String pid) {
+        this.pid = pid;
     }
 
-    public String getPrice() {
-        return price;
+    public int getMoney() {
+        return money;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setMoney(int money) {
+        this.money = money;
     }
 
-    public String getUsedPrice() {
-        return usedPrice;
+    public int getNowmoney() {
+        return nowmoney;
     }
 
-    public void setUsedPrice(String usedPrice) {
-        this.usedPrice = usedPrice;
+    public void setNowmoney(int nowmoney) {
+        this.nowmoney = nowmoney;
+    }
+
+    public int getPnum() {
+        return pnum;
+    }
+
+    public void setPnum(int pnum) {
+        this.pnum = pnum;
     }
 }

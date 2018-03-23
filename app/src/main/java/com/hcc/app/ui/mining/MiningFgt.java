@@ -55,7 +55,6 @@ public class MiningFgt extends BaseLazyFgt {
     }
 
     private void setStatusBar() {
-        StatusBarCompat.setStatusBarColor(getActivity(), getResources().getColor(R.color.colorPrimary));
         StatusBarCompat.translucentStatusBar(getActivity(), isHide);
     }
 

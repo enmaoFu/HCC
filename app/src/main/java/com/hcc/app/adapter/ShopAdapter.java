@@ -20,7 +20,12 @@ public class ShopAdapter extends BaseQuickAdapter<ShopPojo,BaseViewHolder>{
 
     @Override
     protected void convert(BaseViewHolder helper, ShopPojo item) {
-        helper.setTextLine(R.id.item_shop_price_n);
-        helper.setImageByUrl(R.id.item_shop_bg,item.getImg());
+
+        helper.setImageByUrl(R.id.item_shop_bg,item.getPid());
+        helper.setText(R.id.item_title,item.getTitle());
+        helper.setText(R.id.item_shop_price,"¥" + item.getMoney());
+        helper.setText(R.id.item_shop_price_n,"原价¥" + item.getNowmoney());
+        helper.setText(R.id.item_number,"月销" + item.getPnum() + "笔");
+
     }
 }

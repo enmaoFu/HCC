@@ -7,6 +7,6 @@ package com.em.baseframe.config;
  */
 public class HttpConfig {
 
-   public static final String BASE_URL = "http://192.168.2.200:8080/qmcs2-nw/";
+   public static final String BASE_URL = "http://192.168.1.150/inface/";
   
 }

@@ -40,7 +40,7 @@ public class WaterBottleLoadingRenderer extends LoadingRenderer {
     private static final int MIN_WATER_DROP_RADIUS = 1;
 
     private static final int DEFAULT_BOTTLE_COLOR = Color.parseColor("#FFDAEBEB");
-    private static final int DEFAULT_WATER_COLOR = Color.parseColor("#FF29E3F2");
+    private static final int DEFAULT_WATER_COLOR = Color.parseColor("#769dfc");
 
     private static final float DEFAULT_TEXT_SIZE = 16.0f;
 

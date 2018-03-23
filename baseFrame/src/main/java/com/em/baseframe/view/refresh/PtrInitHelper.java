@@ -29,8 +29,9 @@ public class PtrInitHelper {
         mPtrFrameLayout.disableWhenHorizontalMove(true);*/
         StoreHouseHeader header = new StoreHouseHeader(mContext);
         header.setTextColor(mContext.getResources().getColor(R.color.colorPrimary));
+        header.setLineWidth(4);
         header.setPadding(0, DensityUtils.dp2px(mContext, 20), 0, DensityUtils.dp2px(mContext, 10));
-        header.initWithString("Eer");
+        header.initWithString("HCC");
         mPtrFrameLayout.setDurationToCloseHeader(2500);
         mPtrFrameLayout.setLoadingMinTime(1200);
         mPtrFrameLayout.setHeaderView(header);

@@ -8,7 +8,9 @@ import com.em.banner.loader.ImageLoader;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 /**
- * @title  首页轮播banner图片加载类
+ * @title 首页轮播banner图片加载类
+ * @date 2018/02/27
+ * @author enmaoFu
  */
 public class BannerImageLoader extends ImageLoader {
     @Override

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/re_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mining_bg_img_new">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="邀请码"
+            android:textSize="14sp"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/code_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GMDE"
+            android:textSize="16sp"
+            android:textColor="#79be5a"
+            android:typeface="sans"/>
+
+        <ImageView
+            android:id="@+id/copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn"
+            android:layout_marginTop="10dp"/>
+        
+        <ImageView
+            android:id="@+id/code_img"
+            android:layout_width="116dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击保存"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:drawableTop="@drawable/down_img"
+        android:drawablePadding="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/fh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击返回"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:drawableTop="@drawable/fh"
+        android:drawablePadding="4dp"
+        android:layout_toLeftOf="@+id/save"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="16dp"/>
+
+</RelativeLayout>

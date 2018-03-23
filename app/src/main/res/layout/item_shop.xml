@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¥58"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="#ff7e7e"
             android:layout_centerVertical="true"/>
 
@@ -52,6 +52,7 @@
             android:layout_centerVertical="true"/>
 
         <TextView
+            android:id="@+id/item_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="月销23笔"
@@ -63,6 +64,7 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/item_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/item_shop_price_re"

@@ -34,7 +34,7 @@ public class OkHttpUtils {
      * @param uuid
      * @return
      */
-    public static OkHttpClient getInstance(final String token, final String uuid) {
+    public static OkHttpClient getInstance(final String token) {
         if (singleton == null||token!=null) {
             synchronized (OkHttpUtils.class) {
                 if (singleton == null||token!=null) {
@@ -59,7 +59,7 @@ public class OkHttpUtils {
                     singleton.addInterceptor(httpLoggingInterceptor);
 
                     if (token!=null){
-                        Logger.v("更新token");
+                        Logger.v("更新token...");
                         singleton.addInterceptor(new Interceptor() {
                             @Override
                             public Response intercept(Chain chain) throws IOException {
@@ -67,8 +67,7 @@ public class OkHttpUtils {
 
                                 //添加请求头
                                 Request.Builder requestBuilder = original.newBuilder()
-                                        .header("token", token) //添加token
-                                        .header("uuid", uuid); //添加uid
+                                        .header("openid", token); //添加token
 
                                 Request request = requestBuilder.build();
                                 return chain.proceed(request);

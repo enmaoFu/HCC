@@ -457,6 +457,11 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
         notifyItemRangeChanged(internalPosition, mData.size() - internalPosition);
     }
 
+    public void removeAll() {
+        mData.clear();
+        notifyDataSetChanged();
+    }
+
     /**
      * change data
      */

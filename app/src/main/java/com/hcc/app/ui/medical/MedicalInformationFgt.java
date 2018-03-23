@@ -153,7 +153,7 @@ public class MedicalInformationFgt extends BaseLazyFgt{
             public IPagerTitleView getTitleView(Context context, final int index) {
                 ClipPagerTitleView clipPagerTitleView = new ClipPagerTitleView(context);
                 clipPagerTitleView.setText(mTabsString.get(index));
-                clipPagerTitleView.setTextSize(58);
+                clipPagerTitleView.setTextSize(54);
                 clipPagerTitleView.setTextColor(Color.parseColor("#80ffffff"));
                 clipPagerTitleView.setClipColor(Color.WHITE);
                 clipPagerTitleView.setOnClickListener(new View.OnClickListener() {

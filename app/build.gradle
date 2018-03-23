@@ -64,4 +64,10 @@ dependencies {
     })
     //手环包
     compile(name: 'crpblelib-1.1.7', ext: 'aar')
+    //相片裁剪
+    compile 'com.github.yalantis:ucrop:2.2.1'
+    //生成二维码
+    compile 'com.singleshu:ZxingPlus:1.1.4'
+    //事件总线
+    compile 'org.greenrobot:eventbus:3.0.0'
 }

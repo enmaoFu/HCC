@@ -2,7 +2,9 @@ package com.em.baseframe.application;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.UserManager;
 
+import com.em.baseframe.config.UserInfoManger;
 import com.em.baseframe.util.RetrofitUtils;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.orhanobut.logger.LogLevel;
@@ -25,7 +27,7 @@ public class BaseApplication extends Application{
     public void onCreate() {
         super.onCreate();
         mContext = this;
-        RetrofitUtils.init(null, null);
+        RetrofitUtils.init(UserInfoManger.getOpenid());
         initLogger();
         initFresco();
     }

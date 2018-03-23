@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:padding="8dp"
                     android:text="提升算力任务栏"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textColor="#ffffff"
                     android:lineSpacingMultiplier="1.5"
                     android:layout_centerVertical="true"/>
@@ -88,8 +88,34 @@
 
             </LinearLayout>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="定期任务"
+                android:textSize="16sp"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="12dp"/>
+
             <com.em.baseframe.view.gradview.GridViewForScrolview
-                android:id="@+id/gridview"
+                android:id="@+id/dq_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="2"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp">
+            </com.em.baseframe.view.gradview.GridViewForScrolview>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阶段任务"
+                android:textSize="16sp"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"/>
+
+            <com.em.baseframe.view.gradview.GridViewForScrolview
+                android:id="@+id/jd_gridview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:numColumns="2"
